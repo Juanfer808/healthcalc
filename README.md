@@ -253,7 +253,26 @@ Para cada categoría, probamos valores que están justo en el límite para asegu
 * **Obesidad clase II (Class II Obesity):** Se comprueba con valores desde 35 hasta justo antes de 40.
 * **Obesidad clase III (Class III Obesity):** Se comprueba con valores desde 40 en adelante.
 * **Seguridad:** Se rechazan clasificaciones para resultados de IMC negativos o absurdamente altos (más de 150).
+</details>
 
+<details>
+<summary><b>Pruebas de Cálculo del Peso Corporal Ideal (PCI / IBW) - Fórmula de Lorentz</b></summary>
+
+* **Cálculo correcto en hombres:** Se comprueba que, al introducir una altura normal para un hombre, el resultado sea el esperado matemáticamente, de acuerdo con la fórmula de Lorentz: 
+
+  $$PCI = (Estatura - 100) - \frac{(Estatura - 150)}{4}$$
+
+* **Cálculo correcto en mujeres:** Se comprueba que, al introducir una altura normal para una mujer, el resultado sea el esperado matemáticamente, de acuerdo con la fórmula de Lorentz:
+
+  $$PCI = (Estatura - 100) - \frac{(Estatura - 150)}{2}$$
+
+* **Comparación por sexo:** Se comprueba que para una misma altura, el resultado PCI sea diferente entre hombre y mujer, tal y como se establece en la fórmula.
+
+* **Protección ante datos imposibles:**
+  * El sistema debe rechazar estaturas menores a 30 cm.
+  * El sistema debe rechazar estaturas mayores a 300 cm.
+
+* **Protección ante errores de escritura:** Se verifica que no se permitan valores negativos o iguales a cero.
 
 </details>
 
